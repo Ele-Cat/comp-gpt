@@ -7,7 +7,7 @@
         <iframe class="iframe" :src="gpt.url" frameborder="0"></iframe>
       </a-tab-pane>
     </a-tabs>
-
+    <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg' alt='Fork me on Gitee' /></a>
   </div>
 </template>
 
@@ -30,7 +30,12 @@ export default {
       if (localStorage.getItem('confirmDisclaimer') === '1') return
       this.$confirm({
         title: '免责声明',
-        content: h => <div style="color:red;">本网站所整理的GPT模型均为学习所用，请勿用作其他用途，否则后果自负！</div>,
+        content: h => 
+          <div>
+            <p>1.本网站所整理的GPT模型均为学习所用，请勿用作其他用途，否则后果自负！</p>
+            <p>2.本项目中所引用的第三方GPT网站随时可能失效，如失效，请及时与我联系更换。</p>
+            <p>3.大家如果有好用的GPT网站也可以共享出来，开源精神万岁！</p>
+          </div>,
         okText: '我已知晓，关闭',
         okType: 'primary',
         cancelText: '关闭',
@@ -100,5 +105,11 @@ export default {
 ::-webkit-scrollbar-track {
   background: 0 0 !important;
   border-radius: 1px !important;
+}
+
+.widget {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 </style>
