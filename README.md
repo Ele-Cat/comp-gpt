@@ -1,19 +1,23 @@
 # comp-gpt
 
-## Project setup
+## 特别注意
+
+- 本项目中所引用的第三方GPT网站随时可能失效，如果失效，请及时与我联系更换。
+
+## 安装
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包
+
 ```
 yarn build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
