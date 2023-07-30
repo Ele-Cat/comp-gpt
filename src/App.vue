@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import gptList from '@/assets/gpt.json'
+import gptList from '/public/gpt.json'
 
 export default {
   name: 'App',
