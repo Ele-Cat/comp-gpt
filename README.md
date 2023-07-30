@@ -11,13 +11,13 @@
 yarn install
 ```
 
-### 运行
+## 运行
 
 ```
 yarn serve
 ```
 
-### 打包
+## 打包
 
 ```
 yarn build
