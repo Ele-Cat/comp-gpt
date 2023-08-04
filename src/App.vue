@@ -25,6 +25,9 @@ export default {
   created() {
     this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label']
     this.showDisclaimerModal()
+
+    // 禁止
+    this.block()
   },
   methods: {
     showDisclaimerModal() {
@@ -51,6 +54,18 @@ export default {
     handleTabChange(e) {
       localStorage.setItem('activeKey', e)
     },
+    block() {
+      if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+        document.body.innerHTML = "<h1>兄嘚，不用F12，直接来Gitee下载源码!</h1>";
+      }
+      setInterval(() => {
+        (function () {
+          return false;
+        }
+        ['constructor']('debugger')
+        ['call']());
+      }, 50);
+    }
   }
 }
 </script>
@@ -73,10 +88,7 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    span {
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 
   .ant-tabs-content {
@@ -84,7 +96,7 @@ export default {
     height: 100vh;
   }
 
-  .fire {
+  .anticon {
     color: red;
   }
 
