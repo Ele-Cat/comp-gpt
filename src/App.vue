@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <a-tabs v-model="activeKey" tab-position="left" @change="handleTabChange">
-      <a-tab-pane v-for="gpt in gptList" :key="gpt.label">
-        <span slot="tab" :title="gpt.label"><a-icon v-if="gpt.icon" :class="gpt.icon" :type="gpt.icon" />{{ gpt.label
+      <a-tab-pane v-for="(gpt, index) in gptList" :key="gpt.label">
+        <span slot="tab" class="normal-label" :title="gpt.label" v-if="!isPhone"><a-icon v-if="gpt.icon" :class="gpt.icon" :type="gpt.icon" />{{ gpt.label
         }}</span>
+        <span slot="tab" class="phone-label" :title="gpt.label" v-else>{{ index + 1 }}</span>
         <iframe class="iframe" :src="gpt.url" frameborder="0"></iframe>
       </a-tab-pane>
     </a-tabs>
@@ -19,17 +20,26 @@ export default {
   data() {
     return {
       gptList,
-      activeKey: ''
+      activeKey: '',
+      isPhone: false,
     }
   },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   created() {
-    this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label']
-    this.showDisclaimerModal()
-
-    // 禁止
-    this.block()
+    this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
+    this.showDisclaimerModal();
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+    // 禁止F12
+    // this.block();
   },
   methods: {
+    handleResize() {
+      this.isPhone = window.innerWidth <= 640
+      // 在这里可以根据窗口宽度的变化做出相应的处理
+    },
     showDisclaimerModal() {
       if (localStorage.getItem('confirmDisclaimer') === '1') return
       this.$confirm({
@@ -86,9 +96,24 @@ export default {
   .ant-tabs-tab {
     width: 160px;
     overflow: hidden;
+    margin: 0;
+  }
+
+  .normal-label {
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
+  }
+
+  .phone-label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: aqua;
+    color: #fff;
+    border-radius: 50%;
   }
 
   .ant-tabs-content {
@@ -133,6 +158,14 @@ export default {
   p {
     margin: 10px 0 0;
     text-align: justify;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #app {
+    .ant-tabs-tab {
+      width: 68px;
+    }
   }
 }
 </style>
