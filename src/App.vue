@@ -28,7 +28,9 @@ export default {
     window.removeEventListener('resize', this.handleResize);
   },
   created() {
-    this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
+    const stroageActiveKey = localStorage.getItem('activeKey');
+    const stroageActiveKeyExsit = stroageActiveKey && gptList.findIndex(item => item.value === stroageActiveKey) >= 0;
+    this.activeKey = stroageActiveKeyExsit ? stroageActiveKey : gptList[0]['label'];
     this.showDisclaimerModal();
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
