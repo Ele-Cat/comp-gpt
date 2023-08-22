@@ -29,7 +29,7 @@ export default {
   },
   created() {
     const stroageActiveKey = localStorage.getItem('activeKey');
-    const stroageActiveKeyExsit = stroageActiveKey && gptList.findIndex(item => item.value === stroageActiveKey) >= 0;
+    const stroageActiveKeyExsit = stroageActiveKey && gptList.findIndex(item => item.label === stroageActiveKey) >= 0;
     this.activeKey = stroageActiveKeyExsit ? stroageActiveKey : gptList[0]['label'];
     this.showDisclaimerModal();
     this.handleResize();
