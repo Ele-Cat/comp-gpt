@@ -13,7 +13,7 @@
         </span>
       </a-tab-pane>
     </a-tabs>
-    <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg' alt='Fork me on Gitee' /></a>
+    <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg?color=FD6585' alt='Fork me on Gitee' /></a>
   </div>
 </template>
 
@@ -111,6 +111,13 @@ export default {
     width: 160px;
     overflow: hidden;
     margin: 0;
+    cursor: pointer;
+  }
+  .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-nav .ant-tabs-tab:hover {
+    color: #FD6585;
+  }
+  .ant-tabs-ink-bar {
+    background-color: #FD6585;
   }
 
   .normal-label {
@@ -143,7 +150,8 @@ export default {
   }
 
   .anticon {
-    color: red;
+    color: #FD6585;
+
   }
 
   .iframe {
