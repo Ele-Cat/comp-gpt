@@ -7,6 +7,11 @@
         <span slot="tab" class="phone-label" :title="gpt.label" v-else>{{ index + 1 }}</span>
         <iframe class="iframe" :src="gpt.url" frameborder="0"></iframe>
       </a-tab-pane>
+      <a-tab-pane key="添加群聊">
+        <span slot="tab" title="添加群聊" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
+          <a-icon type="qq" /><span v-if="!isPhone">添加群聊</span>
+        </span>
+      </a-tab-pane>
     </a-tabs>
     <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg' alt='Fork me on Gitee' /></a>
   </div>
@@ -22,6 +27,7 @@ export default {
       gptList,
       activeKey: '',
       isPhone: false,
+      qqGroupLink: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FBr4JIxIckrUqgDK-rbdMkoQYfJT4BCs&authKey=Dl1dUP8%2BXRNefHTYG38DyEi3CAOf20Pc8yyIJwKQ7HlP5WX7nYhURs2vVtmttNHX&noverify=0&group_code=887911914',
     }
   },
   beforeDestroy() {
@@ -64,7 +70,13 @@ export default {
       });
     },
     handleTabChange(e) {
-      localStorage.setItem('activeKey', e)
+      if (e === "添加群聊") {
+        this.activeKey = localStorage.getItem('activeKey')
+        localStorage.setItem('activeKey', this.activeKey)
+        window.open(this.qqGroupLink, '_blank')
+      } else {
+        localStorage.setItem('activeKey', e)
+      }
     },
     block() {
       if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
@@ -113,9 +125,16 @@ export default {
     height: 20px;
     line-height: 20px;
     text-align: center;
-    background-color: aqua;
+    background-color: #FD6585;
     color: #fff;
     border-radius: 50%;
+    &.qq-label {
+      .anticon {
+        color: #FFF;
+        margin-right: 0;
+        font-size: 12px;
+      }
+    }
   }
 
   .ant-tabs-content {
