@@ -1,4 +1,4 @@
-# comp-gpt
+# 聚合GPT
 
 ✨<a href='https://ele-cat.gitee.io/comp-gpt/' target="_blank">在线使用</a>
 
@@ -9,25 +9,26 @@
 3. 如果有好用的 GPT 网站也可以联系我共享出来，开源精神万岁！【Ps：这里都是免费无登录不限次数的哦！】
 
 ## 截图
+
 ![PC端](./snapshot/pc.jpg)
 ![移动端](./snapshot/mobile.jpg)
 
 ## 使用
 
-### 安装
+- 安装
 
-```
-yarn install
-```
+  ```
+  yarn install
+  ```
 
-### 运行
+- 运行
 
-```
-yarn serve
-```
+  ```
+  yarn serve
+  ```
 
-### 打包
+- 打包
 
-```
-yarn build
-```
+  ```
+  yarn build
+  ```
