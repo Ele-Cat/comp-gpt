@@ -7,6 +7,11 @@
         <span slot="tab" class="phone-label" :title="gpt.label" v-else>{{ index + 1 }}</span>
         <iframe class="iframe" :src="gpt.url" frameborder="0"></iframe>
       </a-tab-pane>
+      <a-tab-pane key="免责声明">
+        <span slot="tab" title="免责声明" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
+          <a-icon type="bell" /><span v-if="!isPhone">免责声明</span>
+        </span>
+      </a-tab-pane>
       <a-tab-pane key="添加群聊">
         <span slot="tab" title="添加群聊" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
           <a-icon type="qq" /><span v-if="!isPhone">添加群聊</span>
@@ -70,7 +75,12 @@ export default {
       });
     },
     handleTabChange(e) {
-      if (e === "添加群聊") {
+      if (e === "免责声明") {
+        this.activeKey = localStorage.getItem('activeKey')
+        localStorage.setItem('activeKey', this.activeKey)
+        localStorage.setItem('confirmDisclaimer', '0')
+        this.showDisclaimerModal();
+      } else if (e === "添加群聊") {
         this.activeKey = localStorage.getItem('activeKey')
         localStorage.setItem('activeKey', this.activeKey)
         window.open(this.qqGroupLink, '_blank')
@@ -147,6 +157,7 @@ export default {
   .ant-tabs-content {
     padding: 0 !important;
     height: 100vh;
+    box-shadow: 0 0 20px inset #ddd;
   }
 
   .anticon {
