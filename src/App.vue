@@ -76,12 +76,12 @@ export default {
     },
     handleTabChange(e) {
       if (e === "免责声明") {
-        this.activeKey = localStorage.getItem('activeKey')
+        this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
         localStorage.setItem('activeKey', this.activeKey)
         localStorage.setItem('confirmDisclaimer', '0')
         this.showDisclaimerModal();
       } else if (e === "添加群聊") {
-        this.activeKey = localStorage.getItem('activeKey')
+        this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
         localStorage.setItem('activeKey', this.activeKey)
         window.open(this.qqGroupLink, '_blank')
       } else {

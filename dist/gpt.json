@@ -9,6 +9,15 @@
     "url": "https://chat.jinshutuan.com"
   },
   {
+    "label": "AI TOOL-1",
+    "url": "https://rrr.mygpt.bid/",
+    "icon": "fire"
+  },
+  {
+    "label": "AI TOOL-2",
+    "url": "https://www.newgpt.link/"
+  },
+  {
     "label": "AI对话",
     "url": "https://chatai.lra.cn/"
   },
@@ -30,5 +39,10 @@
   {
     "label": "灵动Ai-2",
     "url": "https://ah4t.aiask7.com/c.html"
+  },
+  {
+    "label": "Free2gpt",
+    "url": "https://chatw.free2gpt.xyz/",
+    "icon": "fire"
   }
 ]
