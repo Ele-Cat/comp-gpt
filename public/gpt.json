@@ -9,6 +9,10 @@
     "url": "https://chat.jinshutuan.com"
   },
   {
+    "label": "小野",
+    "url": "http://ai.yscxy.net"
+  },
+  {
     "label": "AI TOOL-1",
     "url": "https://rrr.mygpt.bid/",
     "icon": "fire"
@@ -44,5 +48,13 @@
     "label": "Free2gpt",
     "url": "https://chatw.free2gpt.xyz/",
     "icon": "fire"
+  },
+  {
+    "label": "艾尔智慧",
+    "url": "https://b.aging.run/"
+  },
+  {
+    "label": "FREEGPT",
+    "url": "https://j.aifree.site/"
   }
 ]
