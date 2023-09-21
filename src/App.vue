@@ -17,6 +17,11 @@
           <a-icon type="qq" /><span v-if="!isPhone">添加群聊</span>
         </span>
       </a-tab-pane>
+      <a-tab-pane key="关注B站">
+        <span slot="tab" title="关注B站" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
+          <a-icon type="home" /><span v-if="!isPhone">关注B站</span>
+        </span>
+      </a-tab-pane>
     </a-tabs>
     <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg?color=FD6585' alt='Fork me on Gitee' /></a>
   </div>
@@ -33,6 +38,7 @@ export default {
       activeKey: '',
       isPhone: false,
       qqGroupLink: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FBr4JIxIckrUqgDK-rbdMkoQYfJT4BCs&authKey=Dl1dUP8%2BXRNefHTYG38DyEi3CAOf20Pc8yyIJwKQ7HlP5WX7nYhURs2vVtmttNHX&noverify=0&group_code=887911914',
+      bilibiliLink: 'https://space.bilibili.com/376288070',
     }
   },
   beforeDestroy() {
@@ -84,6 +90,10 @@ export default {
         this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
         localStorage.setItem('activeKey', this.activeKey)
         window.open(this.qqGroupLink, '_blank')
+      } else if (e === "关注B站") {
+        this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
+        localStorage.setItem('activeKey', this.activeKey)
+        window.open(this.bilibiliLink, '_blank')
       } else {
         localStorage.setItem('activeKey', e)
       }
