@@ -9,24 +9,6 @@
     "url": "https://chat.jinshutuan.com"
   },
   {
-    "label": "AI TOOL-1",
-    "url": "https://rrr.mygpt.bid/",
-    "icon": "fire"
-  },
-  {
-    "label": "AI TOOL-2",
-    "url": "https://www.newgpt.link/"
-  },
-  {
-    "label": "AI对话",
-    "url": "https://chatai.lra.cn/"
-  },
-  {
-    "label": "吾爱AI",
-    "url": "https://chat.zoai.cc",
-    "icon": "fire"
-  },
-  {
     "label": "奇途AI绘图",
     "url": "https://midjourney.freet.top/",
     "icon": "picture"
@@ -37,7 +19,8 @@
     "icon": "fire"
   },
   {
-    "label": "FREEGPT",
-    "url": "https://j.aifree.site/"
+    "label": "Coder",
+    "url": "https://aixcoder.com/nl2code/",
+    "icon": "fire"
   }
 ]
