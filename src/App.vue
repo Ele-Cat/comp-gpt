@@ -7,23 +7,19 @@
         <span slot="tab" class="phone-label" :title="gpt.label" v-else>{{ index + 1 }}</span>
         <iframe class="iframe" :src="gpt.url" frameborder="0"></iframe>
       </a-tab-pane>
-      <a-tab-pane key="免责声明">
-        <span slot="tab" title="免责声明" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
-          <a-icon type="bell" /><span v-if="!isPhone">免责声明</span>
-        </span>
-      </a-tab-pane>
-      <a-tab-pane key="添加群聊">
-        <span slot="tab" title="添加群聊" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
-          <a-icon type="qq" /><span v-if="!isPhone">添加群聊</span>
-        </span>
-      </a-tab-pane>
-      <a-tab-pane key="关注B站">
-        <span slot="tab" title="关注B站" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']">
-          <a-icon type="home" /><span v-if="!isPhone">关注B站</span>
-        </span>
-      </a-tab-pane>
     </a-tabs>
-    <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg?color=FD6585' alt='Fork me on Gitee' /></a>
+    <div class="intro">
+      <div class="intro-item" @click="handleIntro('disclaimer')">
+        <a-icon type="bell" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">免责声明</span>
+      </div>
+      <div class="intro-item" @click="handleIntro('qq')">
+        <a-icon type="qq" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">添加群聊</span>
+      </div>
+      <div class="intro-item" @click="handleIntro('bilibili')">
+        <a-icon type="home" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">关注B站</span>
+      </div>
+    </div>
+    <!-- <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg?color=FD6585' alt='Fork me on Gitee' /></a> -->
   </div>
 </template>
 
@@ -81,21 +77,16 @@ export default {
       });
     },
     handleTabChange(e) {
-      if (e === "免责声明") {
-        this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
-        localStorage.setItem('activeKey', this.activeKey)
+      localStorage.setItem('activeKey', e)
+    },
+    handleIntro(e) {
+      if (e === "disclaimer") {
         localStorage.setItem('confirmDisclaimer', '0')
         this.showDisclaimerModal();
-      } else if (e === "添加群聊") {
-        this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
-        localStorage.setItem('activeKey', this.activeKey)
+      } else if (e === "qq") {
         window.open(this.qqGroupLink, '_blank')
-      } else if (e === "关注B站") {
-        this.activeKey = localStorage.getItem('activeKey') || gptList[0]['label'];
-        localStorage.setItem('activeKey', this.activeKey)
+      } else if (e === "bilibili") {
         window.open(this.bilibiliLink, '_blank')
-      } else {
-        localStorage.setItem('activeKey', e)
       }
     },
     block() {
@@ -172,12 +163,30 @@ export default {
 
   .anticon {
     color: #FD6585;
-
   }
 
   .iframe {
     width: 100%;
     height: 100vh;
+  }
+
+  .intro {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    .intro-item {
+      padding: 8px 24px;
+      cursor: pointer;
+      i {
+        margin-right: 8px;
+      }
+      &:hover {
+        color: #FD6585;
+      }
+    }
   }
 }
 
@@ -215,6 +224,10 @@ export default {
   #app {
     .ant-tabs-tab {
       width: 68px;
+    }
+    .anticon {
+      color: #FFF;
+      line-height: 1.8;
     }
   }
 }
