@@ -12,8 +12,9 @@
 
 **可用，但是无法再 frame 中使用**
 
-- https://chat-shared2.zhile.io/
-- http://ai.yscxy.net
+- <a href="https://chat-shared2.zhile.io/" target="_blank">https://chat-shared2.zhile.io/</a>
+- <a href="https://xmfgpt.com/" target="_blank">聚合镜像【部分可用】</a>
+- <a href="https://blog.csdn.net/weixin_43391631/article/details/132622930" target="_blank">免登录好用gpt镜像+常用代码网站【CSDN】</a>
 
 ## 截图
 
