@@ -16,12 +16,18 @@
 - <a href="https://xmfgpt.com/" target="_blank">聚合镜像【部分可用】</a>
 - <a href="https://blog.csdn.net/weixin_43391631/article/details/132622930" target="_blank">免登录好用gpt镜像+常用代码网站【CSDN】</a>
 
-## 截图
+## 项目截图
 
 ![PC端](./snapshot/pc.jpg)
 ![移动端](./snapshot/mobile.jpg)
 
 ## 使用
+
+- 下载
+
+  ```
+  git clone https://gitee.com/ele-cat/comp-gpt.git
+  ```
 
 - 安装
 
