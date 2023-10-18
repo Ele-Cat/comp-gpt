@@ -9,9 +9,13 @@
     "url": "https://chat.jinshutuan.com"
   },
   {
+    "label": "角色扮演",
+    "url": "https://www.zaiwen.top/#/chat/working-edition",
+    "icon": "fire"
+  },
+  {
     "label": "奇途AI",
-    "url": "https://Gpt.freet.top",
-    "icon": "picture"
+    "url": "https://Gpt.freet.top"
   },
   {
     "label": "灵动AI",
@@ -29,27 +33,7 @@
     "icon": "fire"
   },
   {
-    "label": "角色扮演",
-    "url": "https://www.zaiwen.top/#/chat/working-edition",
-    "icon": "fire"
-  },
-  {
-    "label": "迅捷-1",
-    "url": "http://13.231.111.140:8080/#/chat/1002",
-    "icon": "fire"
-  },
-  {
-    "label": "迅捷-2",
-    "url": "http://18.132.17.74:3002/#/chat/1002"
-  },
-  {
-    "label": "AI智能中台",
-    "url": "http://106.14.251.205/chat/new",
-    "icon": "fire"
-  },
-  {
     "label": "Free2gpt",
-    "url": "https://chatab.free2gpt.xyz/",
-    "icon": "fire"
+    "url": "https://chatab.free2gpt.xyz/"
   }
 ]
