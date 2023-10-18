@@ -12,6 +12,9 @@
       <div class="intro-item" @click="handleIntro('disclaimer')">
         <a-icon type="bell" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">免责声明</span>
       </div>
+      <div class="intro-item" @click="handleIntro('code')">
+        <a-icon type="code" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">查看源码</span>
+      </div>
       <div class="intro-item" @click="handleIntro('qq')">
         <a-icon type="qq" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">添加群聊</span>
       </div>
@@ -33,6 +36,7 @@ export default {
       gptList,
       activeKey: '',
       isPhone: false,
+      codeLink: 'https://gitee.com/ele-cat/comp-gpt',
       qqGroupLink: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FBr4JIxIckrUqgDK-rbdMkoQYfJT4BCs&authKey=Dl1dUP8%2BXRNefHTYG38DyEi3CAOf20Pc8yyIJwKQ7HlP5WX7nYhURs2vVtmttNHX&noverify=0&group_code=887911914',
       bilibiliLink: 'https://space.bilibili.com/376288070',
     }
@@ -52,11 +56,11 @@ export default {
   },
   methods: {
     handleResize() {
-      this.isPhone = window.innerWidth <= 640
+      this.isPhone = window.innerWidth <= 640;
       // 在这里可以根据窗口宽度的变化做出相应的处理
     },
     showDisclaimerModal() {
-      if (localStorage.getItem('confirmDisclaimer') === '1') return
+      if (localStorage.getItem('confirmDisclaimer') === '1') return;
       this.$confirm({
         title: '免责声明',
         content: h => 
@@ -65,28 +69,30 @@ export default {
             <p>2.本项目中所引用的第三方GPT网站随时可能失效，如失效，请及时与我联系更换。【Ps：请勿轻易相信网页中广告宣传！谨慎充值！】</p>
             <p>3.如果有好用的GPT网站也可以联系我共享出来，开源精神万岁！【Ps：这里都是免费无登录不限次数的哦！】</p>
           </div>,
-        okText: '我已知晓，关闭',
+        okText: '我已知晓，不再弹出',
         okType: 'primary',
         cancelText: '关闭',
         onOk() {
-          localStorage.setItem('confirmDisclaimer', '1')
+          localStorage.setItem('confirmDisclaimer', '1');
         },
         onCancel() {
-          localStorage.setItem('confirmDisclaimer', '0')
+          localStorage.setItem('confirmDisclaimer', '0');
         },
       });
     },
     handleTabChange(e) {
-      localStorage.setItem('activeKey', e)
+      localStorage.setItem('activeKey', e);
     },
     handleIntro(e) {
       if (e === "disclaimer") {
-        localStorage.setItem('confirmDisclaimer', '0')
+        localStorage.setItem('confirmDisclaimer', '0');
         this.showDisclaimerModal();
+      } else if (e === "code") {
+        window.open(this.codeLink, '_blank');
       } else if (e === "qq") {
-        window.open(this.qqGroupLink, '_blank')
+        window.open(this.qqGroupLink, '_blank');
       } else if (e === "bilibili") {
-        window.open(this.bilibiliLink, '_blank')
+        window.open(this.bilibiliLink, '_blank');
       }
     },
     block() {
