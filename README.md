@@ -13,8 +13,6 @@
 - <a href="https://chat-shared2.zhile.io/" target="_blank">https://chat-shared2.zhile.io/</a>
 - <a href="http://13.231.111.140:8080/#/chat/1002" target="_blank">迅捷-1</a>
 - <a href="http://18.132.17.74:3002/#/chat/1002" target="_blank">迅捷-2</a>
-- <a href="https://xmfgpt.com/" target="_blank">聚合镜像【部分可用】</a>
-- <a href="https://blog.csdn.net/weixin_43391631/article/details/132622930" target="_blank">免登录好用gpt镜像+常用代码网站【CSDN】</a>
 
 ## 项目截图
 
