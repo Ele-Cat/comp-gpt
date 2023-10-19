@@ -16,8 +16,8 @@
 
 ## 项目截图
 
-![PC端](./snapshot/pc.jpg)
-![移动端](./snapshot/mobile.jpg)
+![PC端](./snapshot/pc.png)
+![移动端](./snapshot/mobile.png)
 
 ## 使用
 
