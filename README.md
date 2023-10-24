@@ -11,7 +11,6 @@
 ## 开发者看这里
 
 - <a href="http://18.132.17.74:3002/#/chat/1002" target="_blank">迅捷</a>
-- <a href="https://chat18.aichatos.xyz" target="_blank">binjie</a>
 
 ## 项目截图
 

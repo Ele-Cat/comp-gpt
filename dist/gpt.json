@@ -1,6 +1,11 @@
 [
   {
     "label": "binjie09-1",
+    "url": "https://chat18.aichatos.xyz",
+    "icon": "fire"
+  },
+  {
+    "label": "binjie09-2",
     "url": "https://chat.jinshutuan.com",
     "icon": "fire"
   },
@@ -15,16 +20,16 @@
   },
   {
     "label": "灵动AI",
-    "url": "https://xye7.wenwen7.com/c.html",
+    "url": "https://drth.ai7576.top/c.html",
     "icon": "fire"
   },
   {
-    "label": "Coder",
+    "label": "Coding实验室",
     "url": "https://aixcoder.com/nl2code/",
     "icon": "fire"
   },
   {
-    "label": "toyaml",
+    "label": "ToYaml",
     "url": "https://toyaml.com/chat.html",
     "icon": "fire"
   },

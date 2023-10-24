@@ -12,9 +12,9 @@
       <div class="intro-item" @click="handleIntro('disclaimer')">
         <a-icon type="bell" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">免责声明</span>
       </div>
-      <div class="intro-item" @click="handleIntro('code')">
+      <!-- <div class="intro-item" @click="handleIntro('code')">
         <a-icon type="code" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">查看源码</span>
-      </div>
+      </div> -->
       <div class="intro-item" @click="handleIntro('qq')">
         <a-icon type="qq" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">添加群聊</span>
       </div>
@@ -179,7 +179,7 @@ export default {
   .intro {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     width: 160px;
     display: flex;
     flex-direction: column;
