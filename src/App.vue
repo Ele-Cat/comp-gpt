@@ -9,17 +9,8 @@
       </a-tab-pane>
     </a-tabs>
     <div class="intro">
-      <div class="intro-item" @click="handleIntro('disclaimer')">
-        <a-icon type="bell" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">免责声明</span>
-      </div>
-      <!-- <div class="intro-item" @click="handleIntro('code')">
-        <a-icon type="code" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">查看源码</span>
-      </div> -->
-      <div class="intro-item" @click="handleIntro('qq')">
-        <a-icon type="qq" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">添加群聊</span>
-      </div>
-      <div class="intro-item" @click="handleIntro('bilibili')">
-        <a-icon type="home" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">关注B站</span>
+      <div class="intro-item" @click="handleIntro(info)" v-for="info in infoList" :key="info.value">
+        <a-icon :type="info.value" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">{{info.label}}</span>
       </div>
     </div>
     <!-- <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg?color=FD6585' alt='Fork me on Gitee' /></a> -->
@@ -36,9 +27,28 @@ export default {
       gptList,
       activeKey: '',
       isPhone: false,
-      codeLink: 'https://gitee.com/ele-cat/comp-gpt',
-      qqGroupLink: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FBr4JIxIckrUqgDK-rbdMkoQYfJT4BCs&authKey=Dl1dUP8%2BXRNefHTYG38DyEi3CAOf20Pc8yyIJwKQ7HlP5WX7nYhURs2vVtmttNHX&noverify=0&group_code=887911914',
-      bilibiliLink: 'https://space.bilibili.com/376288070',
+      infoList: [
+        {
+          label: "免责声明",
+          value: "bell",
+          url: "",
+        },
+        // {
+        //   label: "查看源码",
+        //   value: "code",
+        //   url: "https://gitee.com/ele-cat/comp-gpt",
+        // },
+        {
+          label: "添加群聊",
+          value: "qq",
+          url: "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=FBr4JIxIckrUqgDK-rbdMkoQYfJT4BCs&authKey=Dl1dUP8%2BXRNefHTYG38DyEi3CAOf20Pc8yyIJwKQ7HlP5WX7nYhURs2vVtmttNHX&noverify=0&group_code=887911914",
+        },
+        {
+          label: "关注B站",
+          value: "home",
+          url: "https://space.bilibili.com/376288070",
+        }
+      ]
     }
   },
   beforeDestroy() {
@@ -81,18 +91,20 @@ export default {
       });
     },
     handleTabChange(e) {
+      const gpt = gptList.find(gpt => gpt.label === e);
+      if (gpt.icon === "logout") {
+        window.open(gpt.url, '_blank');
+        this.activeKey = localStorage.getItem('activeKey')
+        return
+      }
       localStorage.setItem('activeKey', e);
     },
-    handleIntro(e) {
-      if (e === "disclaimer") {
+    handleIntro(info) {
+      if (info.value === "bell") {
         localStorage.setItem('confirmDisclaimer', '0');
         this.showDisclaimerModal();
-      } else if (e === "code") {
-        window.open(this.codeLink, '_blank');
-      } else if (e === "qq") {
-        window.open(this.qqGroupLink, '_blank');
-      } else if (e === "bilibili") {
-        window.open(this.bilibiliLink, '_blank');
+      } else {
+        window.open(info.url, '_blank');
       }
     },
     block() {

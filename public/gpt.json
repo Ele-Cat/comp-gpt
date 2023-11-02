@@ -31,5 +31,15 @@
   {
     "label": "Free2gpt",
     "url": "https://chatab.free2gpt.xyz/"
+  },
+  {
+    "label": "迅捷-1",
+    "url": "http://18.132.17.74:3002/#/chat/1002",
+    "icon": "logout"
+  },
+  {
+    "label": "迅捷-2",
+    "url": "http://154.88.30.24:3002/#/chat/1002",
+    "icon": "logout"
   }
 ]
