@@ -10,8 +10,6 @@
 
 ## 开发者看这里
 
-- <a href="http://18.132.17.74:3002/#/chat/1002" target="_blank">迅捷</a>
-
 ## 项目截图
 
 ![PC端](./snapshot/pc.png)

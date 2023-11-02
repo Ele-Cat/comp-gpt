@@ -10,6 +10,16 @@
     "icon": "fire"
   },
   {
+    "label": "迅捷-1",
+    "url": "http://18.132.17.74:3002/#/chat/1002",
+    "icon": "fire"
+  },
+  {
+    "label": "迅捷-2",
+    "url": "http://154.88.30.24:3002/#/chat/1002",
+    "icon": "fire"
+  },
+  {
     "label": "角色扮演",
     "url": "https://www.zaiwen.top/#/chat/working-edition",
     "icon": "fire"
@@ -26,11 +36,6 @@
   {
     "label": "Coding实验室",
     "url": "https://aixcoder.com/nl2code/",
-    "icon": "fire"
-  },
-  {
-    "label": "ToYaml",
-    "url": "https://toyaml.com/chat.html",
     "icon": "fire"
   },
   {
