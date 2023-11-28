@@ -40,10 +40,5 @@
     "label": "迅捷-2",
     "url": "http://20.243.255.185:3002/#/chat/1002",
     "icon": "logout"
-  },
-  {
-    "label": "夏目",
-    "url": "http://xiamu.xyz",
-    "icon": "logout"
   }
 ]
