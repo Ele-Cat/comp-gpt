@@ -29,16 +29,11 @@
   },
   {
     "label": "Free2gpt",
-    "url": "https://chatbc.free2gpt.xyz/"
+    "url": "https://chatbd.free2gpt.xyz/"
   },
   {
     "label": "迅捷-1",
-    "url": "http://18.221.141.205/#/chat/1002",
-    "icon": "logout"
-  },
-  {
-    "label": "迅捷-2",
-    "url": "http://43.153.172.83:3002/#/chat/1002",
+    "url": "http://45.150.227.150:3002/#/chat/1002",
     "icon": "logout"
   }
 ]
