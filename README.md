@@ -10,8 +10,7 @@
 
 ## 开发者看这里
 
-- <a href="http://18.132.17.74:3002/#/chat/1002" target="_blank">迅捷-1</a>
-- <a href="http://154.88.30.24:3002/#/chat/1002" target="_blank">迅捷-2</a>
+- <a href="https://chat.jinshutuan.com" target="_blank">binjie</a>
 
 ## 项目截图
 
