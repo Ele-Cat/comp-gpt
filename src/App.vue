@@ -13,12 +13,11 @@
         <a-icon :type="info.value" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">{{info.label}}</span>
       </div>
     </div>
-    <!-- <a href='https://gitee.com/ele-cat/comp-gpt' target="_blank" class="widget"><img src='https://gitee.com/ele-cat/comp-gpt/widgets/widget_1.svg?color=FD6585' alt='Fork me on Gitee' /></a> -->
   </div>
 </template>
 
 <script>
-import gptList from '/public/gpt.json'
+import gptList from '/public/gpt'
 
 export default {
   name: 'App',
@@ -36,7 +35,7 @@ export default {
         // {
         //   label: "查看源码",
         //   value: "code",
-        //   url: "https://gitee.com/ele-cat/comp-gpt",
+        //   url: "https://github.com/ele-cat/comp-gpt",
         // },
         {
           label: "添加群聊",
@@ -109,7 +108,7 @@ export default {
     },
     block() {
       if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
-        document.body.innerHTML = "<h1>兄嘚，不用F12，直接来Gitee下载源码!</h1>";
+        document.body.innerHTML = "<h1>兄嘚，不用F12，直接来Github下载源码!</h1>";
       }
       setInterval(() => {
         (function () {
