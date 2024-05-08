@@ -29,21 +29,17 @@ const gptList = [
   },
   {
     "label": "Chat03",
-    "url": "http://chat.letdata.net/ichat/s2wftazc9fq"
-  },
-  {
-    "label": "Chat04",
     "url": "https://chat04.a1r.cc/#/chat/1002"
   },
   {
     "label": "Free2gpt",
     "url": "https://chatz.free2gpt.xyz/"
   },
-  // {
-  //   "label": "迅捷-1",
-  //   "url": "http://103.30.17.104:3002/#/chat/1002",
-  //   "icon": "logout"
-  // }
+  {
+    "label": "迅捷01",
+    "url": "http://chat.letdata.net/ichat/s2wftazc9fq",
+    "icon": "logout"
+  },
 ]
 
 export default gptList

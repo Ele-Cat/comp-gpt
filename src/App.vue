@@ -12,6 +12,7 @@
       <div class="intro-item" @click="handleIntro(info)" v-for="info in infoList" :key="info.value">
         <a-icon :type="info.value" :class="[isPhone ? 'phone-label qq-label' : 'normal-label']" /><span v-if="!isPhone">{{info.label}}</span>
       </div>
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=comp-gpt.visitor-badge&right_color=%23fd6585" style="height: 18px;object-fit: contain;" alt="">
     </div>
   </div>
 </template>
