@@ -10,14 +10,23 @@ const gptList = [
     "icon": "fire"
   },
   {
+    "label": "创想AI",
+    "url": "https://ideaiai.com/",
+    "icon": "fire"
+  },
+  {
     "label": "在问",
     "url": "https://www.zaiwen.top/#/chat/working-edition",
     "icon": "fire"
   },
   {
-    "label": "创想AI",
-    "url": "https://ideaiai.com/",
+    "label": "AI法律助手",
+    "url": "https://meta.law/",
     "icon": "fire"
+  },
+  {
+    "label": "心态不好勿用",
+    "url": "https://onima.oksocool.com/",
   },
   {
     "label": "Chat01",
