@@ -1,10 +1,5 @@
 const gptList = [
   {
-    "label": "GPT公益站",
-    "url": "https://nx.chkzh.com/",
-    "icon": "fire"
-  },
-  {
     "label": "binjie",
     "url": "https://chat18.aichatos.xyz",
     "icon": "fire"
