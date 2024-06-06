@@ -4,11 +4,11 @@ const gptList = [
     "url": "https://chat18.aichatos.xyz",
     "icon": "fire"
   },
-  {
-    "label": "ChatForAI",
-    "url": "https://chatforai.store/",
-    "icon": "fire"
-  },
+  // {
+  //   "label": "ChatForAI",
+  //   "url": "https://chatforai.store/",
+  //   "icon": "fire"
+  // },
   // {
   //   "label": "智能AI助手",
   //   "url": "https://chat.tinycms.xyz:3002/",
