@@ -1,7 +1,37 @@
 const gptList = [
   {
-    "label": "binjie",
+    "label": "AiChatOS",
     "url": "https://chat18.aichatos.xyz",
+    "icon": "fire"
+  },
+  {
+    "label": "ChatForAI",
+    "url": "https://chatforai.store/",
+    "icon": "fire"
+  },
+  {
+    "label": "智能AI助手",
+    "url": "https://chat.tinycms.xyz:3002/",
+    "icon": "fire"
+  },
+  {
+    "label": "IChat2019",
+    "url": "https://ichat2019.com/ichat",
+    "icon": "fire"
+  },
+  {
+    "label": "AiTool",
+    "url": "https://uuu.mygpt.bid/",
+    "icon": "fire"
+  },
+  {
+    "label": "SkyByte",
+    "url": "https://abot1.gchk2.skybyte.me",
+    "icon": "fire"
+  },
+  {
+    "label": "ChatGPT中文版",
+    "url": "https://codenews.cc/chatgpt",
     "icon": "fire"
   },
   {
