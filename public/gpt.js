@@ -20,11 +20,6 @@ const gptList = [
     "icon": "fire"
   },
   {
-    "label": "AiTool",
-    "url": "https://uuu.mygpt.bid/",
-    "icon": "fire"
-  },
-  {
     "label": "SkyByte",
     "url": "https://abot1.gchk2.skybyte.me",
     "icon": "fire"
