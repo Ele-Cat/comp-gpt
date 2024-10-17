@@ -1,7 +1,7 @@
 const gptList = [
   {
     "label": "AiChatOS",
-    "url": "https://chat18.aichatos8.com",
+    "url": "https://chat18.aichatos98.com",
     "icon": "fire"
   },
   // {
